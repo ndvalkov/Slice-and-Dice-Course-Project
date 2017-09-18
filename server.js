@@ -1,4 +1,4 @@
-const init = () => {
+const init = (dev) => {
   var express = require('express'),
     bodyParser = require('body-parser');
 
@@ -6,9 +6,12 @@ const init = () => {
 
   app.use(bodyParser.json());
 
-  app.use(express.static('app'));
-  app.use(express.static('.tmp'));
-  // app.use(express.static('dist'));
+  if (dev) {
+    app.use(express.static('app'));
+    app.use(express.static('.tmp'));
+  } else {
+    app.use(express.static('dist'));
+  }
 
   app.use('/bower_components', express.static('bower_components'));
 

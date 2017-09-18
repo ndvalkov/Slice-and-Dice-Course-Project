@@ -8,3 +8,11 @@
 // Test Browserify
 // import foo from './foo';
 // foo(); // => hello world
+
+import requester from './requester';
+
+requester.get('', {})
+  .then((res) => {
+    alert(res);
+  });
+

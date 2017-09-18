@@ -1,3 +1,4 @@
 'use strict';
-const pesho = 1;
-alert('Pesho');
+const pesho = "PESHO";
+const html = MyApp.templates.partial({pesho: pesho});
+alert(html);

@@ -53,7 +53,7 @@ gulp.task('lint:test', () => {
     .pipe(gulp.dest('test/spec'));
 });
 
-gulp.task('html', ['styles', 'scripts'], () => {
+gulp.task('html', ['styles', 'templates', 'partials', 'scripts'], () => {
   return gulp.src('app/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if(/\.js$/, $.uglify({compress: {drop_console: true}})))
@@ -96,7 +96,7 @@ gulp.task('extras', () => {
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('nodeserve', () => {
-  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {
+  runSequence(['clean', 'wiredep'], ['styles', 'templates', 'partials', 'scripts', 'fonts'], () => {
     Promise.resolve()
       .then(() => require('./server').init(true))
       .then(() => {
@@ -108,10 +108,13 @@ gulp.task('nodeserve', () => {
         gulp.watch([
           'app/*.html',
           'app/images/**/*',
-          '.tmp/fonts/**/*'
+          '.tmp/fonts/**/*',
+          '.tmp/templates/**/*.js',
         ]).on('change', reload);
 
         gulp.watch('app/styles/**/*.scss', ['styles']);
+        gulp.watch('app/templates/*.hbs', ['templates']);
+        gulp.watch('app/templates/partials/*.hbs', ['partials']);
         gulp.watch('app/scripts/**/*.js', ['scripts']);
         gulp.watch('app/fonts/**/*', ['fonts']);
         gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -131,7 +134,7 @@ gulp.task('nodeserve:dist', ['default'], () => {
 });
 
 gulp.task('serve', () => {
-  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {
+  runSequence(['clean', 'wiredep'], ['styles', 'templates', 'partials', 'scripts', 'fonts'], () => {
     browserSync.init({
       notify: false,
       port: 9000,
@@ -146,10 +149,13 @@ gulp.task('serve', () => {
     gulp.watch([
       'app/*.html',
       'app/images/**/*',
-      '.tmp/fonts/**/*'
+      '.tmp/fonts/**/*',
+      '.tmp/templates/**/*.js',
     ]).on('change', reload);
 
     gulp.watch('app/styles/**/*.scss', ['styles']);
+    gulp.watch('app/templates/*.hbs', ['templates']);
+    gulp.watch('app/templates/partials/*.hbs', ['partials']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/fonts/**/*', ['fonts']);
     gulp.watch('bower.json', ['wiredep', 'fonts']);
@@ -211,4 +217,32 @@ gulp.task('default', () => {
     dev = false;
     runSequence(['clean', 'wiredep'], 'build', resolve);
   });
+});
+
+gulp.task('templates', () => {
+  return gulp.src('app/templates/*.hbs')
+    .pipe($.plumber())
+    .pipe($.handlebars())
+    .pipe($.defineModule('plain'))
+    .pipe($.declare({
+      namespace: 'MyApp.templates' // change this to whatever you want
+    }))
+    .pipe($.concat('templates.js'))
+    .pipe(gulp.dest('.tmp/templates'));
+});
+
+gulp.task('partials', function() {
+  return gulp.src('app/templates/partials/*.hbs')
+    .pipe($.plumber())
+    .pipe($.handlebars())
+    .pipe($.wrap('Handlebars.registerPartial(<%= processPartialName(file.relative) %>, Handlebars.template(<%= contents %>));', {}, {
+      imports: {
+        processPartialName: function(fileName) {
+          // Escape the output with JSON.stringify
+          return JSON.stringify(path.basename(fileName, '.js'));
+        }
+      }
+    }))
+    .pipe($.concat('partials.js'))
+    .pipe(gulp.dest('.tmp/templates'));
 });

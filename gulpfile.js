@@ -38,7 +38,7 @@ gulp.task('scripts', () => {
 
 function lint(files) {
   return gulp.src(files)
-    .pipe($.eslint({ fix: true }))
+    .pipe($.eslint({fix: true}))
     .pipe(reload({stream: true, once: true}))
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failAfterError()));
@@ -78,7 +78,8 @@ gulp.task('images', () => {
 });
 
 gulp.task('fonts', () => {
-  return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
+  return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {
+  })
     .concat('app/fonts/**/*'))
     .pipe($.if(dev, gulp.dest('.tmp/fonts'), gulp.dest('dist/fonts')));
 });
@@ -93,6 +94,30 @@ gulp.task('extras', () => {
 });
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+
+gulp.task('nodeserve', () => {
+  runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {
+    Promise.resolve()
+      .then(() => require('./server').init())
+      .then(() => {
+        browserSync.init(null, {
+          proxy: 'http://localhost:3000',
+          baseDir: ['.tmp', 'app']
+        });
+
+        gulp.watch([
+          'app/*.html',
+          'app/images/**/*',
+          '.tmp/fonts/**/*'
+        ]).on('change', reload);
+
+        gulp.watch('app/styles/**/*.scss', ['styles']);
+        gulp.watch('app/scripts/**/*.js', ['scripts']);
+        gulp.watch('app/fonts/**/*', ['fonts']);
+        gulp.watch('bower.json', ['wiredep', 'fonts']);
+      });
+  });
+});
 
 gulp.task('serve', () => {
   runSequence(['clean', 'wiredep'], ['styles', 'scripts', 'fonts'], () => {

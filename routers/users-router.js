@@ -5,29 +5,11 @@ var express = require('express'),
 module.exports = function (db) {
   var router = express.Router();
 
-  router.get('/', function (req, res) {
-
-    var page = +(req.query.page || 0),
-      size = +(req.query.size || 10);
-
-    var users = db('users')
-      .chain()
-      .sortBy('username')
-      .slice(page * size)
-      .take(size).value();
-
-    res.json({
-      result: users || []
-    });
-  })
+  router
     .post('/', function (req, res) {
       var user = req.body;
-
       user.usernameLower = user.username.toLowerCase();
       user.authKey = authKeyGenerator.get(user.id);
-      user.availableStars = 5;
-      user.songs = [];
-      // user.comments = [];
 
       if (db('users').find({
           usernameLower: user.username.toLowerCase()
@@ -49,16 +31,18 @@ module.exports = function (db) {
       var dbUser = db('users').find({
         usernameLower: user.username.toLowerCase()
       });
+
       if (!dbUser || dbUser.passHash !== user.passHash) {
         res.status(404)
           .json('Username or password is invalid');
+      } else {
+        res.json({
+          result: {
+            username: dbUser.username,
+            authKey: dbUser.authKey
+          }
+        });
       }
-      res.json({
-        result: {
-          username: dbUser.username,
-          authKey: dbUser.authKey
-        }
-      });
     });
   return router;
 };

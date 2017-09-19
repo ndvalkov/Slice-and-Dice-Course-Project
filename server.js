@@ -4,7 +4,8 @@ const init = (dev) => {
     low = require('lowdb');
 
   var app = express(),
-    db = low('data/data.json');
+    db = low('./data/data.json');
+
   db._.mixin(require('underscore-db'));
 
   app.use(bodyParser.json());
@@ -19,7 +20,9 @@ const init = (dev) => {
   app.use('/bower_components', express.static('bower_components'));
 
   var usersRouter = require('./routers/users-router')(db);
+
   require('./utils/authorized-user')(app, db);
+
   app.use('/api/users', usersRouter);
 
   var port = process.env.PORT || 3000;

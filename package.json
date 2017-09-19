@@ -18,7 +18,10 @@
     "gulp-define-module": "^0.1.5",
     "gulp-wrap": "^0.13.0",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "lodash": "^3.10.1",
+    "lowdb": "^0.10.2",
+    "underscore-db": "^0.9.0"
   },
   "devDependencies": {
     "babel-core": "^6.4.0",

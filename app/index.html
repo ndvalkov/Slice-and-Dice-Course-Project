@@ -11,6 +11,8 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css" />
+    <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -28,47 +30,151 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active">
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
-        </ul>
-        <h3 class="text-muted">Slice and Dice Course Project</h3>
-      </div>
+    <div id="root">
+      <header class="container">
+        <div class="row">
+          <div class="page-header col-md-4">
+            <!--<tengu-logo></tengu-logo>-->
 
-      <!--<div class="jumbotron">-->
-        <!--<h1>'Allo, 'Allo!</h1>-->
-        <!--<p class="lead">Always a pleasure scaffolding your apps.</p>-->
-        <!--<p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>-->
-      <!--</div>-->
+            <h1>MelodyUnderdog</h1>
+            <h3>
+              <small>Share links to underrated <span>YouTube</span> songs</small>
+            </h3>
+          </div>
 
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+          <div class="col-md-3">
+            <div class="top">
+              <!--<tengu-logo></tengu-embed>-->
+              <div class="embed-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item"
+                          src="https://www.youtube.com/embed/yoHYaS12lgY"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
+          <form class="form-inline col-md-3 hidden" id="container-sign-in">
+            <!--<tengu-sign-in></tengu-sign-in>-->
+            <div class="form-group pull-right">
+              <input type="text" class="form-control" id="tb-username" name="username"
+                     placeholder="Username"/>
+            </div>
 
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
+            <div class="form-group pull-right">
+              <input type="password" class="form-control" id="tb-password" name="password"
+                     placeholder="Password"/>
+            </div>
 
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
+            <div class="form-subgroup pull-right">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember me
+                </label>
+              </div>
+              <a href="#/users/register" class="text-primary"> or Register</a>
+              <button id="btn-sign-in" class="btn-success">Sign in</button>
+            </div>
+
+          </form>
+
+          <!--Sign out container-->
+          <form class="form-inline col-md-6 hidden" id="container-sign-out">
+            <!--<tengu-sign-out></tengu-sign-out>-->
+            <button id="btn-sign-out" class="suit_and_tie pull-right">Sign out</button>
+
+            <button type="button" class="btn btn-default btn-md pull-right">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span
+              id="signed-in-user"></span>
+            </button>
+
+          </form>
+        </div>
+
+        <nav id="main-nav" class="navbar navbar-default navbar-collapse hidden row">
+          <ul class="nav navbar-nav col-md-8">
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/songs/all">All Songs</a></li>
+            <li><a href="#/songs">My Songs</a></li>
+            <!--<li><a href="#/songs/tops">Top</a></li>-->
+            <!--Uncomment to test routes-->
+            <!--<li><a href="#/songs/794080">Test API</a></li>-->
+            <!--<li><a href="#/songs/794080/del">Test API</a></li>-->
+            <!--<li><a href="#/songs/794080/comments">Test API</a></li>-->
+            <!--<li><a href="#/songs/325994/comment">Test API</a></li>-->
+            <!--<li><a href="#/songs/325994/rate">Test API</a></li>-->
+            <li><a href="#/songs/top/5">Top</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div id="content">
+
+              <!--Main content goes here !-->
+
+            </div>
+          </div>
+          <div class="col-md-5 aside-container">
+            <aside id="right">
+
+              <!--Comments block replace dummy carousel !-->
+              <input id="box-id" type="checkbox" class="with-font"/>
+              <label for="box-id">Rate</label>
+
+              <div id="comments-carousel" class="carousel slide" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                  <div class="item active">
+                    <div class="card text-center">
+                      <div class="card-block">
+                        <blockquote class="card-blockquote">
+                          <p>This song is the shit!</p>
+                          <footer>Someone famous, perhaps is <cite
+                            title="Source Title">Gosho</cite>
+                          </footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="card text-center">
+                      <div class="card-block">
+                        <blockquote class="card-blockquote">
+                          <p>SUCKS! Period.</p>
+                          <footer>Someone famous, perhaps is <cite
+                            title="Source Title">Stavri</cite>
+                          </footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <div class="card text-center">
+                      <div class="card-block">
+                        <blockquote class="card-blockquote">
+                          <p>Let's explore Japanese music! I start today!</p>
+                          <footer>Someone famous, perhaps is <cite
+                            title="Source Title">Milena</cite>
+                          </footer>
+                        </blockquote>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </aside>
+          </div>
         </div>
       </div>
 
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
-      </div>
+      <footer class="footer">
+      </footer>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -87,9 +193,13 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <script src="/bower_components/handlebars/handlebars.runtime.js"></script>
     <script src="/bower_components/es6-promise/es6-promise.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
+    <script src="/bower_components/toastr/toastr.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
+    <!--bundle Sammy with plugins, cannot use vendor.js for unknown reason-->
     <!-- build:js scripts/plugins.js -->
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
@@ -103,7 +213,12 @@
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
     <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="/bower_components/sammy/lib/sammy.js"></script>
     <!-- endbuild -->
+
+    <!--cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.4.1/sha1.js"></script>
+    <!--endcdn-->
 
     <!-- build:js scripts/main.js -->
     <script src="./templates/templates.js"></script>

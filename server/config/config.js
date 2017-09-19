@@ -15,8 +15,6 @@ const applyTo = (app, dev) => {
   }
 
   app.use('/bower_components', express.static('bower_components'));
-
-
 };
 
 module.exports = { applyTo };

@@ -3,11 +3,9 @@ import templateLoader from '../template-loader';
 const homeController = function () {
 
   function all(context) {
-
     templateLoader.get('main')
       .then(function (template) {
-        alert('From Main');
-        // context.$element().html(template);
+        context.$element().html(template);
       });
   }
 

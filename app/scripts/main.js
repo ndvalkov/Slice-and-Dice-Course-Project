@@ -8,8 +8,7 @@ import usersController from './controllers/users-controller';
 
     this.get('#/', homeController.all);
 
-    this.get('#/users', usersController.all);
-    this.get('#/users/register', usersController.register);
+    this.get('#/register', usersController.register);
 
     // this.get('#/songs', songsController.get);
     // this.get('#/songs/all', songsController.all);

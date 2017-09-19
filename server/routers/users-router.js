@@ -7,23 +7,22 @@ const attachTo = (app, data) => {
   usersRouter
     .post('/', function (req, res) {
       var user = req.body;
-      user.authKey = authKeyGenerator.get(user.id);
+      user.authKey = authKeyGenerator.get(user.username);
 
       data.users.findByUsername(user.username)
         .then((user) => {
           if (user) {
             res.status(400)
               .json('Username is already taken');
+          } else {
+            data.users.create(user)
+              .then(() => {
+                res.status(201)
+                  .json({
+                    result: user
+                  });
+              })
           }
-        })
-        .then(() => {
-          data.users.create(user);
-        })
-        .then(() => {
-          res.status(201)
-            .json({
-              result: user
-            });
         })
         .catch(() => {
           res.status(500)

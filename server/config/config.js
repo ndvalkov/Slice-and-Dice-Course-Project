@@ -16,7 +16,7 @@ const applyTo = (app, dev) => {
 
   app.use('/bower_components', express.static('bower_components'));
 
-  // require('./utils/authorized-user')(app, db);
+
 };
 
 module.exports = { applyTo };

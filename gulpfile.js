@@ -112,7 +112,7 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 gulp.task('nodeserve', () => {
   runSequence(['clean', 'wiredep'], ['styles', 'templates', 'scripts', 'fonts'], () => {
     Promise.resolve()
-      .then(() => require('./server').init(true))
+      .then(() => require('./app').start(true))
       .then(() => {
         browserSync.init(null, {
           proxy: 'http://localhost:3000',
@@ -137,7 +137,7 @@ gulp.task('nodeserve', () => {
 
 gulp.task('nodeserve:dist', ['default'], () => {
   Promise.resolve()
-    .then(() => require('./server').init(false))
+    .then(() => require('./app').start(false))
     .then(() => {
       browserSync.init(null, {
         proxy: 'http://localhost:3000',

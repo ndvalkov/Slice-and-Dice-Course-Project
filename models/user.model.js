@@ -1,0 +1,28 @@
+class User {
+  static isValid(model) {
+    // const result =
+    //   typeof model.username !== 'undefined'
+    //   && typeof model.username === 'string'
+    //   && typeof model.password !== 'undefined'
+    //   && typeof model.password === 'string';
+    // return result;
+    return true;
+  }
+
+  get id() {
+    return this._id;
+  }
+
+  static toViewModel(model) {
+    const viewModel = new User();
+
+    Object.keys(model)
+      .forEach((prop) => {
+        viewModel[prop] = model[prop];
+      });
+
+    return viewModel;
+  }
+}
+
+module.exports = User;

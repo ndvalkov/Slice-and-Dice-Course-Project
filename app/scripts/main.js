@@ -2,7 +2,7 @@
 
 // Test Handlebars
 // const pesho = 'PESHO';
-// const html = MyApp.templates.partial({pesho: pesho});
+// const html = MyApp.templates.main({pesho: pesho});
 // alert(html);
 
 // Test Browserify
@@ -15,4 +15,10 @@ requester.get('', {})
   .then((res) => {
     alert(res);
   });
+
+// test Template loader
+// import tl from './template-loader';
+//
+// tl.get('main', {'pesho':'Pesho'})
+//   .then((res) => {alert(res)});
 

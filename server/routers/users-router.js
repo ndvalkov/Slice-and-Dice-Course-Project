@@ -8,10 +8,9 @@ const attachTo = (app, data) => {
     .post('/', function (req, res) {
       var user = req.body;
       user.authKey = authKeyGenerator.get(user.username);
-
       data.users.findByUsername(user.username)
-        .then((user) => {
-          if (user) {
+        .then((userFromDb) => {
+          if (userFromDb) {
             res.status(400)
               .json('Username is already taken');
           } else {
@@ -30,26 +29,28 @@ const attachTo = (app, data) => {
         });
     })
     .put('/auth', function (req, res) {
-
       var user = req.body;
-      var dbUser = db('users').find({
-        usernameLower: user.username.toLowerCase()
-      });
-
-      if (!dbUser || dbUser.passHash !== user.passHash) {
-        res.status(404)
-          .json('Username or password is invalid');
-      } else {
-        res.json({
-          result: {
-            username: dbUser.username,
-            authKey: dbUser.authKey
+      data.users.findByUsername(user.username)
+        .then((userFromDb) => {
+          if (!userFromDb || userFromDb.passHash !== user.passHash) {
+            res.status(404)
+              .json('Username or password is invalid');
+          } else {
+            res.json({
+              result: {
+                username: userFromDb.username,
+                authKey: userFromDb.authKey
+              }
+            });
           }
+        })
+        .catch(() => {
+          res.status(500)
+            .json('Oops! Something went wrong.');
         });
-      }
     });
 
   app.use('/api/users', usersRouter);
 };
 
-module.exports = { attachTo };
+module.exports = {attachTo};

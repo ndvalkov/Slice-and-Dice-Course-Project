@@ -134,7 +134,7 @@ gulp.task('nodeserve', () => {
   });
 });
 
-gulp.task('nodeserve:deploy', ['default'], () => {
+gulp.task('deploy', () => {
   Promise.resolve()
     .then(() => require('./app').start(false));
 });

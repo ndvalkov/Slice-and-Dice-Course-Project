@@ -114,7 +114,7 @@ gulp.task('nodeserve', () => {
       .then(() => require('./app').start(true))
       .then(() => {
         browserSync.init(null, {
-          proxy: 'http://localhost:3000',
+          proxy: 'http://localhost:3001',
           baseDir: ['.tmp', 'app']
         });
 
@@ -134,12 +134,17 @@ gulp.task('nodeserve', () => {
   });
 });
 
+gulp.task('nodeserve:deploy', ['default'], () => {
+  Promise.resolve()
+    .then(() => require('./app').start(false));
+});
+
 gulp.task('nodeserve:dist', ['default'], () => {
   Promise.resolve()
     .then(() => require('./app').start(false))
     .then(() => {
       browserSync.init(null, {
-        proxy: 'http://localhost:3000',
+        proxy: 'http://localhost:3001',
         baseDir: ['dist']
       });
     });

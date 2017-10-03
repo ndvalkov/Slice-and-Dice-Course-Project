@@ -1,4 +1,5 @@
 var express = require('express');
+var utils = require('../../../utils/router-utils')();
 
 const attachTo = (app, data) => {
   var dishesRouter = express.Router();

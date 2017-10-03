@@ -15,7 +15,6 @@ const init = (db) => {
     reviews: new ReviewsData(db),
     testimonials: new TestimonialsData(db),
     recommendations: new RecommendationsData(db)
-
   });
 };
 

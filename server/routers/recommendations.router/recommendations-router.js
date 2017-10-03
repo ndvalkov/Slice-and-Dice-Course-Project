@@ -60,14 +60,14 @@ const attachTo = (app, data) => {
             return Promise.all(promises);
           }
         })
-        .then((promises) => {
-          if (!promises) {
+        .then((results) => {
+          if (!results) {
             res.status(400)
-              .json('Unable to add review');
+              .json('Unable to add recommendations');
           } else {
             const recommendations = [];
             // remove duplicates
-            promises.forEach(p => {
+            results.forEach(p => {
               recommendations.push(p.pop());
             });
 

@@ -1,5 +1,5 @@
 var express = require('express'),
-  authKeyGenerator = require('../../utils/auth-key-generator');
+  authKeyGenerator = require('../../../utils/auth-key-generator');
 
 const attachTo = (app, data) => {
   var usersRouter = express.Router();

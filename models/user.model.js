@@ -1,4 +1,6 @@
-class User {
+const BaseModel = require('./base/base.model');
+
+class User extends BaseModel {
   static isValid(model) {
     // const result =
     //   typeof model.username !== 'undefined'
@@ -11,17 +13,6 @@ class User {
 
   get id() {
     return this._id;
-  }
-
-  static toViewModel(model) {
-    const viewModel = new User();
-
-    Object.keys(model)
-      .forEach((prop) => {
-        viewModel[prop] = model[prop];
-      });
-
-    return viewModel;
   }
 }
 

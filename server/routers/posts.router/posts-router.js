@@ -28,7 +28,6 @@ const attachTo = (app, data) => {
           if (posts) {
             const comments = posts.map((p) => p.comments)
               .reduce((arr, x) => x.concat(arr), []);
-            console.log(comments);
 
             res.status(201)
               .json({

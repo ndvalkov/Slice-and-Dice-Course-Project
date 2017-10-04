@@ -3,7 +3,7 @@ import templateLoader from '../template-loader';
 const homeController = function () {
 
   function all(context) {
-    templateLoader.get('main')
+    templateLoader.get('sliced-home')
       .then(function (template) {
         context.$element().html(template);
       });

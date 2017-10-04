@@ -13,6 +13,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css" />
     <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
+    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -30,78 +31,82 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div id="root">
-      <header class="container">
-        <div class="row">
-          <div class="page-header col-md-4">
+    <div id="content">
 
-            <h1>Test SPA</h1>
-
-          </div>
-
-          <div class="col-md-3">
-
-          </div>
-
-          <form class="form-inline col-md-3 hidden" id="container-sign-in">
-            <!--<tengu-sign-in></tengu-sign-in>-->
-            <div class="form-group pull-right">
-              <input type="text" class="form-control" id="tb-username" name="username"
-                     placeholder="Username"/>
-            </div>
-
-            <div class="form-group pull-right">
-              <input type="password" class="form-control" id="tb-password" name="password"
-                     placeholder="Password"/>
-            </div>
-
-            <div class="form-subgroup pull-right">
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox"> Remember me
-                </label>
-              </div>
-              <a href="#/users/register" class="text-primary"> or Register</a>
-              <button id="btn-sign-in" class="btn-success">Sign in</button>
-            </div>
-
-          </form>
-
-          <!--Sign out container-->
-          <form class="form-inline col-md-6 hidden" id="container-sign-out">
-            <!--<tengu-sign-out></tengu-sign-out>-->
-            <button id="btn-sign-out" class="suit_and_tie pull-right">Sign out</button>
-
-            <button type="button" class="btn btn-default btn-md pull-right">
-              <span class="glyphicon glyphicon-user" aria-hidden="true"></span><span
-              id="signed-in-user"></span>
-            </button>
-
-          </form>
-        </div>
-
-      </header>
-
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div id="content">
-
-              <!--Main content goes here !-->
-
-            </div>
-          </div>
-          <div class="col-md-5 aside-container">
-            <aside id="right">
-              <!--Comments block replace dummy carousel !-->
-            </aside>
-          </div>
-        </div>
-      </div>
-
-      <footer class="footer">
-      </footer>
     </div>
+
+    <!--<div id="root">-->
+      <!--<header class="container">-->
+        <!--<div class="row">-->
+          <!--<div class="page-header col-md-4">-->
+
+            <!--<h1>Test SPA</h1>-->
+
+          <!--</div>-->
+
+          <!--<div class="col-md-3">-->
+
+          <!--</div>-->
+
+          <!--<form class="form-inline col-md-3 hidden" id="container-sign-in">-->
+            <!--&lt;!&ndash;<tengu-sign-in></tengu-sign-in>&ndash;&gt;-->
+            <!--<div class="form-group pull-right">-->
+              <!--<input type="text" class="form-control" id="tb-username" name="username"-->
+                     <!--placeholder="Username"/>-->
+            <!--</div>-->
+
+            <!--<div class="form-group pull-right">-->
+              <!--<input type="password" class="form-control" id="tb-password" name="password"-->
+                     <!--placeholder="Password"/>-->
+            <!--</div>-->
+
+            <!--<div class="form-subgroup pull-right">-->
+              <!--<div class="checkbox">-->
+                <!--<label>-->
+                  <!--<input type="checkbox"> Remember me-->
+                <!--</label>-->
+              <!--</div>-->
+              <!--<a href="#/users/register" class="text-primary"> or Register</a>-->
+              <!--<button id="btn-sign-in" class="btn-success">Sign in</button>-->
+            <!--</div>-->
+
+          <!--</form>-->
+
+          <!--&lt;!&ndash;Sign out container&ndash;&gt;-->
+          <!--<form class="form-inline col-md-6 hidden" id="container-sign-out">-->
+            <!--&lt;!&ndash;<tengu-sign-out></tengu-sign-out>&ndash;&gt;-->
+            <!--<button id="btn-sign-out" class="suit_and_tie pull-right">Sign out</button>-->
+
+            <!--<button type="button" class="btn btn-default btn-md pull-right">-->
+              <!--<span class="glyphicon glyphicon-user" aria-hidden="true"></span><span-->
+              <!--id="signed-in-user"></span>-->
+            <!--</button>-->
+
+          <!--</form>-->
+        <!--</div>-->
+
+      <!--</header>-->
+
+      <!--<div class="container">-->
+        <!--<div class="row">-->
+          <!--<div class="col-md-6">-->
+            <!--<div id="content">-->
+
+              <!--&lt;!&ndash;Main content goes here !&ndash;&gt;-->
+
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="col-md-5 aside-container">-->
+            <!--<aside id="right">-->
+              <!--&lt;!&ndash;Comments block replace dummy carousel !&ndash;&gt;-->
+            <!--</aside>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<footer class="footer">-->
+      <!--</footer>-->
+    <!--</div>-->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>

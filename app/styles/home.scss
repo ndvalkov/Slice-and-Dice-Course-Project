@@ -41,7 +41,7 @@
       .main-nav li a:visited {
       }
 
-      .main-nav > li > a:hover, .main-nav li a:focus, .main-nav li a:active {
+      .main-nav > li > a:hover {
         color: rgb(238,228,186) !important;
         font-style: italic;
         border-top: 10px solid #867F6F;
@@ -81,5 +81,36 @@
         font-style: italic;
       }
 
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #452816;
+  }
+/*slider*/
+
+
+
+
+@media(max-width:767px) {
+  .main-nav li ul {
+    top: 10px;
+    left: 0;
+    right: 10px;
+  }
+
+  .main-nav {
+    width: 99%;
+  }
+}
+
+@media(min-width:768px) {
+
+}
+
+@media(min-width:992px) {
+
+}
+
+@media(min-width:1200px) {
+
+}
 
 

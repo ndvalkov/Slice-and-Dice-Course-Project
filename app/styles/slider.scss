@@ -1,0 +1,38 @@
+#main-slider {
+  height: 465px;
+  color: white;
+  flex: 1;
+  position: relative;
+}
+
+  .slider-nav {
+    width: 143px;
+    height: 31px;
+    background: #ffffff url("../images/bg-slider-nav.png") repeat-x right top;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+  }
+
+    .slider-nav #foo:checked::before,
+    input[type="checkbox"] {
+      position:absolute;
+      clip: rect(0,0,0,0);
+      clip: rect(0 0 0 0);
+    }
+
+    .slider-nav #foo:checked,
+    .slider-nav input[type="checkbox"] + label::before {
+      content: url('../images/radio-slider-inactive.png');
+    }
+
+    .slider-nav input[type="checkbox"]:checked + label::before {
+      content: url('../images/radio-slider-active.png');
+    }
+

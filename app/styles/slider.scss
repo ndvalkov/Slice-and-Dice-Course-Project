@@ -11,8 +11,6 @@
   color: white;
   flex: 1;
   position: relative;
-  margin-left: 16%;
-  overflow: hidden;
 }
 
   .slider-nav {
@@ -29,6 +27,10 @@
     vertical-align: middle;
     padding-top: 10px;
   }
+
+    .carousel-inner {
+      margin-left: 16%;
+    }
 
     .slider-nav #foo:checked::before,
     input[type="checkbox"] {
@@ -49,7 +51,6 @@
     #main-slider .item {
       max-width: 370px;
       margin-top: 48px;
-      overflow: hidden;
     }
 
       #main-slider h2 {

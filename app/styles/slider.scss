@@ -1,8 +1,14 @@
+@font-face {
+  font-family: 'League Gothic';
+  src: url('../fonts/leaguegothic-regular-webfont.ttf') format('truetype');
+}
+
 #main-slider {
   height: 465px;
   color: white;
   flex: 1;
   position: relative;
+  margin-left: 16%;
 }
 
   .slider-nav {
@@ -36,3 +42,45 @@
       content: url('../images/radio-slider-active.png');
     }
 
+    #main-slider .item {
+      max-width: 370px;
+    }
+
+      #main-slider h2 {
+        display: inline-block;
+        width: 370px;
+        height: 85px;
+        font-family: 'League Gothic', san-serif, serif;
+        font-size: 48px;
+        text-transform: uppercase;
+      }
+
+      #main-slider p {
+        font-family: "Helvetica", sans-serif, serif;
+        font-weight: bold;
+        color: rgba(255,255,255,0.91);
+      }
+
+      #main-slider button {
+        font-size: 16px;
+        height: 38px;
+        padding-left: 19px;
+        padding-right: 19px;
+        font-family: "Georgia", sans-serif, serif;
+        background-color: #769C5A;
+        border-radius: 18px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        border-left-style: none;
+        border-right-style: none;
+        border-width: 0.8px;
+
+      }
+
+      #main-slider button:focus {
+        outline-style: none;
+      }
+
+      #main-slider button:hover {
+        background-color: #766C5A; /* Green */
+      }

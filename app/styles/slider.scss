@@ -13,84 +13,84 @@
   position: relative;
 }
 
-  .slider-nav {
-    width: 143px;
-    height: 31px;
-    background: #ffffff url("../images/bg-slider-nav.png") repeat-x right top;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    text-align: center;
-    vertical-align: middle;
-    padding-top: 10px;
-  }
+.slider-nav {
+  width: 143px;
+  height: 31px;
+  background: #ffffff url("../images/bg-slider-nav.png") repeat-x right top;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
+}
 
-    .carousel-inner {
-      margin-left: 16%;
-    }
+.carousel-inner {
+  margin-left: 16%;
+}
 
-    .slider-nav #foo:checked::before,
-    input[type="checkbox"] {
-      position:absolute;
-      clip: rect(0,0,0,0);
-      clip: rect(0 0 0 0);
-    }
+.slider-nav #foo:checked::before,
+input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
+}
 
-    .slider-nav #foo:checked,
-    .slider-nav input[type="checkbox"] + label::before {
-      content: url('../images/radio-slider-inactive.png');
-    }
+.slider-nav #foo:checked,
+.slider-nav input[type="checkbox"] + label::before {
+  content: url('../images/radio-slider-inactive.png');
+}
 
-    .slider-nav input[type="checkbox"]:checked + label::before {
-      content: url('../images/radio-slider-active.png');
-    }
+.slider-nav input[type="checkbox"]:checked + label::before {
+  content: url('../images/radio-slider-active.png');
+}
 
-    #main-slider .item {
-      max-width: 370px;
-      margin-top: 48px;
-    }
+#main-slider .item {
+  max-width: 370px;
+  margin-top: 48px;
+}
 
-      #main-slider h2 {
-        display: inline-block;
-        width: 370px;
-        font-family: 'League Gothic', san-serif, serif;
-        text-transform: uppercase;
-        font-size: 48px;
-      }
+#main-slider h2 {
+  display: inline-block;
+  width: 370px;
+  font-family: 'League Gothic', san-serif, serif;
+  text-transform: uppercase;
+  font-size: 48px;
+}
 
-      #main-slider p {
-        font-family: "Helvetica", sans-serif, serif;
-        font-weight: bold;
-        color: rgba(255,255,255,0.91);
-        text-overflow: ellipsis;
-        overflow: hidden;
-        max-height: 69px;
-        line-height: 1.3em;
-      }
+#main-slider p {
+  font-family: "Helvetica", sans-serif, serif;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.91);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 69px;
+  line-height: 1.3em;
+}
 
-      #main-slider button {
-        font-size: 16px;
-        height: 38px;
-        margin-top: 9px;
-        padding-left: 19px;
-        padding-right: 19px;
-        font-family: "Georgia", sans-serif, serif;
-        background-color: #769C5A;
-        border-radius: 18px;
-        -webkit-transition-duration: 0.4s; /* Safari */
-        transition-duration: 0.4s;
-        border-left-style: none;
-        border-right-style: none;
-        border-width: 0.8px;
-      }
+#main-slider button {
+  font-size: 16px;
+  height: 38px;
+  margin-top: 9px;
+  padding-left: 19px;
+  padding-right: 19px;
+  font-family: "Georgia", sans-serif, serif;
+  background-color: #769C5A;
+  border-radius: 18px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-left-style: none;
+  border-right-style: none;
+  border-width: 0.8px;
+}
 
-      #main-slider button:focus {
-        outline-style: none;
-      }
+#main-slider button:focus {
+  outline-style: none;
+}
 
-      #main-slider button:hover {
-        background-color: #766C5A; /* Green */
-      }
+#main-slider button:hover {
+  background-color: #766C5A; /* Green */
+}

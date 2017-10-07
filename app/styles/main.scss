@@ -24,6 +24,9 @@ body {
 
 footer {
   width: 100%;
+  position: fixed;
+  left:0;
+  bottom:0;
 }
 
 nav {
@@ -59,11 +62,16 @@ ul {
 
 /* imported styles */
 
+// shared
 @import "navbar.scss";
+@import "subheader-bar.scss";
 
+// home
 @import "slider.scss";
 @import "slogan.scss";
 @import "content-home.scss";
 @import "footer-home.scss";
 
+// menu
 @import "title-menu.scss";
+@import "content-menu.scss";

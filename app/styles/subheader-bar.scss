@@ -52,7 +52,7 @@
 }
 
 .search-form input[type=text]:focus {
-  outline: none;
+  outline: 0;
 }
 
 .search-form input[type=submit] {
@@ -68,6 +68,10 @@
   border-left-style: none;
   border-right-style: none;
   border-width: 0.8px;
+}
+
+.search-form input[type=submit]:focus {
+  outline: 0;
 }
 
 .subheader-list {

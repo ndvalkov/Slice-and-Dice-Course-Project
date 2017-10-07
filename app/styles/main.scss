@@ -10,9 +10,16 @@ $icon-font-path: '../fonts/';
   padding: 0.2em 0;
 }
 
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Space out content a bit */
 body {
   background-color: #452816;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 footer {

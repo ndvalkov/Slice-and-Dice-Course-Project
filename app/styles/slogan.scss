@@ -4,7 +4,7 @@
 }
 
 .container-slogan {
-  height: 126px;
+  min-height: 126px;
   background-color: white;
   position: relative;
   flex: 1;
@@ -47,5 +47,39 @@
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-  vertical-align: middle;
 }
+
+/*Responsive*/
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+  .container-slogan {
+    height: 250px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+  .container-slogan {
+    height: 190px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+  .container-slogan {
+    height: 168px;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
+
+

@@ -16,12 +16,7 @@ body {
 }
 
 footer {
-  /*left: 0;
-  bottom: 0;
-  position: fixed;*/
   width: 100%;
-  height: 40px;
-  background: tomato;
 }
 
 nav {
@@ -53,11 +48,4 @@ ul {
 @import "slider.scss";
 @import "slogan.scss";
 @import "content-home.scss";
-
-
-
-
-
-
-
-
+@import "footer-home.scss";

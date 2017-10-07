@@ -1,0 +1,106 @@
+footer {
+  min-height: 126px;
+  background: -webkit-linear-gradient(#ffffff, #f2f2e8); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#ffffff, #f2f2e8); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#ffffff, #f2f2e8); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#ffffff, #f2f2e8); /* Standard syntax */
+  position: relative;
+  flex: 1;
+}
+
+.footer-home button {
+  font-size: 16px;
+  min-height: 38px;
+  margin-top: 9px;
+  padding-left: 19px;
+  padding-right: 19px;
+  font-family: "Georgia", sans-serif, serif;
+  background-color: #a6a17b;
+  color: rgba(255,255,255,1);
+  border-radius: 18px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-left-style: none;
+  border-right-style: none;
+  border-width: 0.8px;
+  position: absolute;
+  top: -27px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.footer-home button:focus {
+  outline-style: none;
+}
+
+.footer-home button:hover {
+  background-color: #766C5A;
+}
+
+.footer-home img {
+  position: absolute;
+  top:25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-navbar {
+  position: absolute;
+  top:30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-navbar ul li {
+  font-family: 'Georgia', san-serif, serif;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0;
+  font-size: 12px;
+}
+
+.footer-navbar ul li a {
+  color: #442917 !important;
+}
+
+.footer-navbar ul li a:link {
+  background-color: transparent;
+}
+
+.footer-navbar ul li a:active, .footer-navbar ul li a:hover {
+  color: rgb(162,157,121) !important;
+  font-style: italic;
+}
+
+.footer-home p {
+  font-size: 12px;
+  color: rgb(146,144,124);
+  font-family: 'Georgia', san-serif, serif;
+  position: absolute;
+  bottom:1%;
+  width: 100%;
+  text-align: center;
+  font-style: italic;
+}
+
+
+/*Responsive*/
+
+@media(max-width: 767px) {
+  footer {
+    min-height: 400px;
+  }
+}
+
+@media(min-width: 768px) {
+}
+
+@media(min-width: 992px) {
+
+}
+
+@media(min-width: 1200px) {
+
+}

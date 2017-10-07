@@ -49,6 +49,14 @@ ul {
   border-radius: 0;
 }
 
+#wrapper {
+  padding-top: 30px;
+}
+
+.wine {
+  background-color: #56211a;
+}
+
 /* imported styles */
 
 @import "navbar.scss";
@@ -56,3 +64,5 @@ ul {
 @import "slogan.scss";
 @import "content-home.scss";
 @import "footer-home.scss";
+
+@import "title-menu.scss";

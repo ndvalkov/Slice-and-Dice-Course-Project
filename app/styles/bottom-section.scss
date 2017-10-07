@@ -1,0 +1,70 @@
+.container-content-bottom {
+  background-color: white;
+  width: 100%;
+  padding-top: 42px;
+}
+
+.container-content-bottom .row {
+  margin-left: 16%;
+  margin-right: 16%;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+  padding-bottom: 42px;
+}
+
+.brand-info .copyright {
+  font-size: 12px;
+  color: rgb(146, 144, 124);
+  font-family: 'Georgia', san-serif, serif;
+  font-style: italic;
+  margin-top: 12px;
+}
+
+.brand-info .info {
+  font-family: 'Georgia', san-serif, serif;
+  font-size: 12px;
+  color: rgb(68, 41, 23);
+  line-height: 1.8;
+}
+
+.recent-comments-list, .recent-posts-list {
+  margin: 0.1em 0;
+  padding: 0 1em;
+  list-style: none;
+}
+
+.recent-comments-item:before, .recent-posts-item:before {
+  content: "";
+  border-color: transparent #111;
+  border-style: solid;
+  border-width: 0.15em 0 0.15em 0.25em;
+  display: block;
+  height: 0;
+  width: 0;
+  left: -1em;
+  top: 0.9em;
+  position: relative;
+}
+
+.recent-comments-item a, .recent-posts-item a {
+  font-family: 'Georgia', san-serif, serif;
+  font-size: 12px;
+  color: rgb(68, 41, 23);
+  transition: color 0.1s ease-in-out;
+  padding: 5px;
+}
+
+.recent-comments-item a:hover, .recent-posts-item a:hover {
+  text-decoration: none;
+  color: rgba(68, 41, 23, 0.7);
+}
+
+.recent-comments-title, .recent-posts-title {
+  font-family: 'League Gothic', san-serif, serif;
+  font-size: 22px;
+  color: rgb(202, 198, 161);
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+
+

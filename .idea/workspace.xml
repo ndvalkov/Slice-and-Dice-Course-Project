@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89837590-c3b1-458d-85c3-3d111696d41c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/content-post.scss" afterPath="$PROJECT_DIR$/app/styles/content-post.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/title-section.scss" afterPath="$PROJECT_DIR$/app/styles/title-section.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/sliced-post.hbs" afterPath="$PROJECT_DIR$/app/templates/sliced-post.hbs" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,21 +20,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sliced-post.hbs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sliced-post.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/sliced-post.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="197" column="14" lean-forward="true" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
+            <state relative-caret-position="280">
+              <caret line="84" column="44" lean-forward="true" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content-post.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="content-post.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/styles/content-post.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+            <state relative-caret-position="446">
+              <caret line="154" column="3" lean-forward="false" selection-start-line="154" selection-start-column="3" selection-end-line="154" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -50,15 +52,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>modernizr</find>
-      <find>a</find>
-      <find>alert</find>
-      <find>si</find>
       <find>log</find>
       <find>Consol</find>
       <find>cons</find>
       <find>date</find>
-      <find>commen</find>
       <find>conca</find>
       <find>styles</find>
       <find>main.cs</find>
@@ -80,6 +77,11 @@
       <find>comment-author-img</find>
       <find>Butto</find>
       <find>butt</find>
+      <find>.container-post</find>
+      <find>.post-content</find>
+      <find>margin-</find>
+      <find>commen</find>
+      <find>asid</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\Acer\Desktop\SDProject\Slice-and-Dice-Course-Project</dir>
@@ -132,16 +134,16 @@
         <option value="$PROJECT_DIR$/app/styles/slogan.scss" />
         <option value="$PROJECT_DIR$/app/styles/footer-home.scss" />
         <option value="$PROJECT_DIR$/app/styles/content-menu.scss" />
-        <option value="$PROJECT_DIR$/app/styles/bottom-section.scss" />
         <option value="$PROJECT_DIR$/app/styles/title-menu.scss" />
-        <option value="$PROJECT_DIR$/app/styles/title-section.scss" />
         <option value="$PROJECT_DIR$/app/templates/sliced-menu.hbs" />
         <option value="$PROJECT_DIR$/app/templates/sliced-posts.hbs" />
         <option value="$PROJECT_DIR$/app/styles/subheader-bar.scss" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/home-controller.js" />
         <option value="$PROJECT_DIR$/app/styles/main.scss" />
-        <option value="$PROJECT_DIR$/app/styles/content-post.scss" />
+        <option value="$PROJECT_DIR$/app/styles/bottom-section.scss" />
+        <option value="$PROJECT_DIR$/app/styles/title-section.scss" />
         <option value="$PROJECT_DIR$/app/templates/sliced-post.hbs" />
+        <option value="$PROJECT_DIR$/app/styles/content-post.scss" />
       </list>
     </option>
   </component>
@@ -165,6 +167,43 @@
     <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Code quality toolsCSS</id>
+          </State>
+          <State>
+            <id>Code quality toolsJavaScript</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>TypeScript</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -180,6 +219,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -263,7 +303,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,7 +315,10 @@
     <property name="node.js.selected.package.eslint" value="C:\Users\Acer\Desktop\SDProject\Slice-and-Dice-Course-Project\node_modules\eslint" />
     <property name="add_unversioned_files" value="true" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SCSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.selected.package.stylelint" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -393,12 +435,14 @@
       <workItem from="1507131230191" duration="3295000" />
       <workItem from="1507191608255" duration="16146000" />
       <workItem from="1507278674198" duration="12714000" />
-      <workItem from="1507356305383" duration="48264000" />
+      <workItem from="1507356305383" duration="48972000" />
+      <workItem from="1507465349720" duration="149000" />
+      <workItem from="1507465528427" duration="5058000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216162000" />
+    <option name="totallyTimeSpent" value="222077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -408,7 +452,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -420,6 +463,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -612,7 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="35" column="10" lean-forward="true" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -635,15 +678,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/title-section.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="3" lean-forward="true" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -651,7 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="56" column="14" lean-forward="true" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -659,7 +692,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="35" lean-forward="true" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -667,7 +699,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="95" column="17" lean-forward="true" selection-start-line="95" selection-start-column="17" selection-end-line="95" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -675,7 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="6" lean-forward="true" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2091">
           <caret line="124" column="1" lean-forward="false" selection-start-line="124" selection-start-column="1" selection-end-line="124" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,15 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,7 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="75" column="15" lean-forward="false" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="15" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -715,15 +734,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
           <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/bottom-section.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="61" column="2" lean-forward="true" selection-start-line="61" selection-start-column="2" selection-end-line="65" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,7 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="163" column="3" lean-forward="true" selection-start-line="163" selection-start-column="3" selection-end-line="163" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,7 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="86" column="1" lean-forward="true" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -747,7 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="72" column="1" lean-forward="true" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -755,30 +762,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="94" column="1" lean-forward="true" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/bottom-section.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/content-home.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        <state relative-caret-position="523">
+          <caret line="127" column="3" lean-forward="true" selection-start-line="127" selection-start-column="3" selection-end-line="127" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/content-post.scss">
+    <entry file="file://$PROJECT_DIR$/app/styles/title-section.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="35" column="28" lean-forward="true" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+        <state relative-caret-position="378">
+          <caret line="40" column="23" lean-forward="true" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/sliced-post.hbs">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="84" column="44" lean-forward="true" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/content-post.scss">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="446">
-          <caret line="197" column="14" lean-forward="true" selection-start-line="197" selection-start-column="14" selection-end-line="197" selection-end-column="14" />
+          <caret line="154" column="3" lean-forward="false" selection-start-line="154" selection-start-column="3" selection-end-line="154" selection-end-column="3" />
           <folding />
         </state>
       </provider>

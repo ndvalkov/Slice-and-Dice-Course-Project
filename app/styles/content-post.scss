@@ -102,6 +102,59 @@ aside .container-recent-posts {
   left: -10px;
 }
 
+/*Responsive*/
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+  .container-posts {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+
+  .container-post {
+    text-align: justify;
+  }
+
+  .post-content, .comment-content {
+    padding-right: 0;
+    padding-left: 0;
+    line-height: 167%;
+  }
+
+  .post-img {
+    margin-right: 15px;
+  }
+
+  .comment-arrow {
+    display: none;
+  }
+
+  .comments-list {
+   padding: 15px;
+  }
+
+  .textarea-comment {
+    font-size: 0.8em;
+    margin: 0 auto;
+  }
+}
+
+// Small devices (landscape phones, 576px and up) + Medium devices (tablets, 768px and up)
+@media (min-width: 576px) and (max-width: 991px) {
+  .container-posts {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 23px;
+    padding-bottom: 25px;
+  }
+
+  .comment-arrow {
+    display: none;
+  }
+}
+
 
 
 

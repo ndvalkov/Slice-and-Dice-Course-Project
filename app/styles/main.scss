@@ -60,15 +60,18 @@ ul {
 
 // shared
 @import "navbar.scss";
+@import "title-section.scss";
 @import "subheader-bar.scss";
 @import "bottom-section.scss";
+@import "footer.scss";
 
 // home
 @import "slider.scss";
 @import "slogan.scss";
 @import "content-home.scss";
-@import "footer-home.scss";
 
 // menu
-@import "title-menu.scss";
 @import "content-menu.scss";
+
+// post
+@import "content-post.scss";

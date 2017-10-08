@@ -6,26 +6,26 @@
   font-style: normal;
 }
 
-.container-title-menu {
+.container-title-page {
   min-height: 163px;
   margin-left: 16%;
   position: relative;
 }
 
-.title-menu {
+.title-page {
   position: absolute;
   bottom: 0;
   margin-bottom: 16px;
 }
 
-.title-menu h2 {
+.title-page h2 {
   color: white;
   font-family: 'League Gothic', san-serif, serif;
   text-transform: uppercase;
   font-size: 48px;
 }
 
-.title-menu p {
+.title-page p {
   font-family: 'Helvetica', san-serif, serif;
   font-weight: bold;
   font-size: 14px;
@@ -37,7 +37,7 @@
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) {
-  .title-menu p {
+  .title-page p {
     margin-right: 10px;
   }
 }

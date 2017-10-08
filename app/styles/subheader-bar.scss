@@ -81,6 +81,21 @@
   color: rgb(180, 164, 141);
 }
 
+.subheader-list li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.subheader-list li + li:before {
+  content: "\00BB";
+  zoom: 135%;
+  padding-right: 7px;
+}
+
+.subheader-list .active {
+  color: #766255;
+}
+
 /*Responsive*/
 
 // Extra small devices (portrait phones, less than 576px) + Small devices (landscape phones, 576px and up)

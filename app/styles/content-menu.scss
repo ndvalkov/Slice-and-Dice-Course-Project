@@ -64,4 +64,25 @@
   padding-top: 4px;
 }
 
+/*Responsive*/
 
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+  .container-content-menu {
+    padding-bottom: 53px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767px) {
+  .container-content-menu {
+    padding-bottom: 64px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991px) {
+  .container-content-menu {
+    padding-bottom: 53px;
+  }
+}

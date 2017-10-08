@@ -32,3 +32,12 @@
   color: rgb(218,203,167);
   vertical-align: bottom;
 }
+
+/*Responsive*/
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+  .title-menu p {
+    margin-right: 10px;
+  }
+}

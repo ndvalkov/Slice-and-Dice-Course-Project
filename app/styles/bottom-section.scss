@@ -66,5 +66,12 @@
   margin-top: 0;
 }
 
+/*Responsive*/
 
-
+// Extra small devices (portrait phones, less than 576px) + Small devices (landscape phones, 576px and up)
+  // + Medium devices (tablets, 768px and up)
+@media (max-width: 991px) {
+  .recent-comments, .recent-posts {
+    margin-top: 33px;
+  }
+}

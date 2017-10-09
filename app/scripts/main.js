@@ -25,6 +25,11 @@ import usersController from './controllers/users-controller';
 
   $(function () {
     sammyApp.run('#/');
+
+    $(window).load(function() {
+      $('.loader').fadeOut('slow');
+    })
+
   });
 }());
 

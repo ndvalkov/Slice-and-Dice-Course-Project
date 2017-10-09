@@ -53,7 +53,6 @@
   z-index: 1;
   visibility: hidden;
   opacity: 0;
-  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
   filter: alpha(opacity=0);
   -webkit-transition: 200ms ease;
   -moz-transition: 200ms ease;
@@ -68,9 +67,15 @@
   background-color: #999281;
 }
 
+.main-nav li ul {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .main-nav li ul li {
   padding-top: 10px;
   padding-bottom: 10px;
+  padding-left: 29px;
 }
 
 .main-nav li ul li:hover a {
@@ -82,11 +87,48 @@
   background-color: #452816;
 }
 
-@media(max-width: 767px) {
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 575px) {
+  .main-nav {
+    padding-left: 20px;
+    font-size: 1.3em;
+  }
+
   .main-nav li ul {
     top: 10px;
     left: 0;
     right: 10px;
+  }
+
+  .main-nav > li > a:hover {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  .main-nav {
+    width: 99%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .main-nav {
+    padding-left: 20px;
+    font-size: 1.3em;
+  }
+
+  .main-nav li ul {
+    top: 10px;
+    left: 0;
+    right: 10px;
+  }
+
+  .main-nav li ul li {
+    display: inline-block;
+  }
+
+  .main-nav > li > a:hover {
+    border-top-color: transparent;
+    border-bottom-color: transparent;
   }
 
   .main-nav {

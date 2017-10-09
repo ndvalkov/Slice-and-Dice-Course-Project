@@ -1,0 +1,125 @@
+.container-location {
+  min-height: 527px;
+  background-color: #ebe9d0;
+  width: 100%;
+  padding-left: 16%;
+  padding-right: 16%;
+  padding-top: 43px;
+}
+
+.map {
+  border: 1px solid #e5e2c6;
+  background-color: white;
+  max-width: 601px;
+  padding: 1px;
+}
+
+.company-info p {
+  white-space: pre-line;
+}
+
+.company-info h3 {
+  font-family: 'League Gothic', san-serif, serif;
+  font-size: 22px;
+  color: rgb(202, 198, 161);
+  text-transform: uppercase;
+}
+
+.company-info address {
+  color: rgb(68, 41, 23);
+}
+
+.company-info span {
+  font-family: 'Georgia', san-serif, serif;
+  font-size: 14px;
+  color: rgb(68, 41, 23);
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.company-info p {
+  color: rgba(68, 41, 23, 0.7);
+}
+
+.address-title {
+  margin-top: 0;
+}
+
+/*Responsive*/
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+  .container-location {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .company-info h3 {
+    font-size: 16px;
+  }
+
+  .company-info p, .company-info address, .company-info span {
+    font-size: 12px;
+    line-height: 200%;
+  }
+
+  .company-info section {
+    margin-top: 0;
+  }
+
+  .company-info section + section {
+    margin-top: 0;
+  }
+
+  .address-title, .hours-of-operation-title, .contact-info-title {
+    margin-top: 0;
+  }
+
+  .container-location {
+    padding-bottom: 27px;
+  }
+
+  .map {
+    margin-top: 20px;
+  }
+}
+
+// Small devices (landscape phones, 576px and up) + // Medium devices (tablets, 768px and up)
+@media (min-width: 576px) and (max-width: 991px) {
+  .container-location {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .company-info section {
+    margin-top: 0;
+  }
+
+  .company-info p, .company-info address, .company-info span {
+    line-height: 190%;
+  }
+
+  .company-info section + section {
+    margin-top: 0;
+  }
+
+  .address-title, .hours-of-operation-title, .contact-info-title {
+    margin-top: 0;
+  }
+
+  .container-location {
+    padding-bottom: 55px;
+  }
+
+  .map {
+    margin-top: 23px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-location {
+    padding-left: 16%;
+    padding-right: 16%;
+  }
+}
+

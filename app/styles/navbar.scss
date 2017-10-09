@@ -1,4 +1,5 @@
 .main-navbar {
+  position: relative;
   border: none;
   border-radius: 0;
   margin-left: 16%;
@@ -87,6 +88,60 @@
   background-color: #452816;
 }
 
+#btn-sign-out {
+  line-height: 130%;
+  color: white;
+}
+
+.user-info {
+  display: inline-block;
+  position: absolute;
+  z-index: 999;
+  bottom: -4.75em;
+  right: 2em;
+}
+
+#signed-in-user-wrap, #signed-in-user {
+  font-family: 'Georgia', san-serif, serif;
+  color: white;
+  font-style: italic;
+}
+
+#signed-in-user {
+  font-size: 1.8em;
+}
+
+#signed-in-user-wrap {
+  padding: 5px;
+  visibility: hidden;
+}
+
+.user-info:hover #signed-in-user-wrap {
+  visibility: visible;
+}
+
+#btn-sign-out {
+  font-size: 16px;
+  height: 38px;
+  margin-top: 9px;
+  padding-left: 23px;
+  padding-right: 23px;
+  font-family: "Georgia", sans-serif, serif;
+  background-color: #769C5A;
+  border-radius: 18px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-left-style: none;
+  border-right-style: none;
+  border-width: 0.8px;
+}
+
+.admin a {
+  background-color: #867F6F;
+}
+
+/*Responsive*/
+
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 575px) {
   .main-nav {
@@ -107,6 +162,11 @@
 
   .main-nav {
     width: 99%;
+  }
+
+  .user-info {
+    bottom: -4em;
+    right: 1em;
   }
 }
 
@@ -133,6 +193,11 @@
 
   .main-nav {
     width: 99%;
+  }
+
+  .user-info {
+    bottom: -4em;
+    right: 1em;
   }
 }
 

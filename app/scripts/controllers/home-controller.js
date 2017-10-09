@@ -11,7 +11,13 @@ const homeController = function () {
       })
       .then(function () {
         if (dataService.users.hasUser()) {
-          $('#signed-in-user').html(localStorage.getItem('signed-in-user-username'));
+          var currentUsername = localStorage.getItem('signed-in-user-username');
+
+          if (currentUsername === 'niki') {
+            $('.admin').removeClass('hidden');
+          }
+
+          $('#signed-in-user').html(currentUsername);
           $('#btn-sign-out').on('click', function (e) {
             e.preventDefault();
             usersController.signOut();

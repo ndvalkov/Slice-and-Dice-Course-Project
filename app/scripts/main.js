@@ -1,4 +1,3 @@
-import dataService from './data';
 import homeController from './controllers/home-controller';
 import usersController from './controllers/users-controller';
 
@@ -26,23 +25,6 @@ import usersController from './controllers/users-controller';
 
   $(function () {
     sammyApp.run('#/');
-
-    if (dataService.users.hasUser()) {
-      $('#container-sign-out').removeClass('hidden');
-      $('#main-nav').removeClass('hidden');
-      $('#signed-in-user').html(localStorage.getItem('signed-in-user-username'));
-      $('#btn-sign-out').on('click', function (e) {
-        e.preventDefault();
-        usersController.signOut();
-      });
-    } else {
-      $('#container-sign-in').removeClass('hidden');
-      $('#btn-sign-in').on('click', function (e) {
-        e.preventDefault();
-        usersController.signIn();
-      });
-    }
-
   });
 }());
 

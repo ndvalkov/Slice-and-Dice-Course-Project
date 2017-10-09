@@ -27,6 +27,7 @@ const attachTo = (app, data) => {
               .json('Sorry, validation failed');
           } else {
             var user = req.body;
+
             user.authKey = authKeyGenerator.get(user.username.length);
             data.users.findByUsername(user.username)
               .then((userFromDb) => {

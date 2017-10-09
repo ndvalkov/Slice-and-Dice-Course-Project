@@ -5,7 +5,9 @@ const templateLoader = (() => {
     });
   }
 
-  return {get};
+  return {
+    get
+  };
 })();
 
 export default templateLoader;

@@ -1,12 +1,182 @@
-<h2>Welcome to <strong>Melody Underdog</strong></h2>
-<p>This is not an app for popular music videos</p>
-<ul>
-  <li>Here you can share links to old, underrated and forgotten songs</li>
-  <li>Only links to <a href="https://www.youtube.com/" target="_blank">YouTube</a> videos with fewer views, likes, or older upload dates can be added</li>
-  <li>Up to 1000000 views, or up to 1000 likes</li>
-  <li>The songs' <span class="label label-info">Underdog</span> status is then evaluated, and it serves as a modifier for their new rating</li>
-  <li>You have 5 stars to award each day, stars given are multiplied by the <span class="label label-info">Underdog</span> modifier</li>
-  <li>In a way, this app helps raise popularity of good but less known songs</li>
-  <li>Have fun! Thanks...</li>
-  <li>This app was created only for educational purpose</li>
-</ul>
+<main class="main">
+
+  <!--slider-->
+  <section class="main-slider-container container-fluid">
+    <div id="main-slider" class="carousel slide" data-ride="carousel">
+
+      <div class="slider-nav">
+        <input data-target="#main-slider" type="checkbox" id="c1" name="c1" data-slide-to="0"/>
+        <label for="c1"><span></span></label>
+        <input data-target="#main-slider" type="checkbox" id="c2" name="c2" data-slide-to="1"/>
+        <label for="c2"><span></span></label>
+        <input data-target="#main-slider" type="checkbox" id="c3" name="c3" data-slide-to="2"/>
+        <label for="c3"><span></span></label>
+        <input data-target="#main-slider" type="checkbox" id="c4" name="c4" data-slide-to="3"/>
+        <label for="c4"><span></span></label>
+        <input data-target="#main-slider" type="checkbox" id="c5" name="c5" data-slide-to="4"/>
+        <label for="c5"><span></span></label>
+      </div>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        <div class="item active">
+          <h2>Delicious food that won't hurt your wallet</h2>
+          <p>Spicy jalapeno irure sausage anim rump, enim flank jerky eu jowl. Ut officia corned beef cillum dolore,
+            rump pork chop pork in turkey filet mignon. Ham deserunt doner, porchetta bacon leberkas culpa excepteur
+            ham hock ipsum do ut drumstick mollit fugiat. Enim ribeye drumstick ham hock cupim non. Pastrami laborum
+            culpa incididunt shankle duis. Bacon labore fugiat sirloin kevin beef ribs. Andouille flank dolore
+            bresaola drumstick voluptate.</p>
+          <button>Button's Text Goes Right Here</button>
+        </div>
+
+        <!--<div class="item">-->
+        <!--Some Slide 2-->
+        <!--</div>-->
+
+        <!--<div class="item">-->
+        <!--Some Slide 3-->
+        <!--</div>-->
+      </div>
+    </div>
+  </section>
+
+  <!--company slogan-->
+  <section class="container-slogan container-fluid">
+    <img class="bottom-shadow" src="../images/slider-bottom-shadow.png" alt=""/>
+
+    <div class="company-slogan">
+      <h3>"Our awesome company slogan goes right over here, we have the best food around"</h3>
+      <h5>Unc elementum lacus in gravida pelentesque urna dolor eleifend felis eleifend</h5>
+    </div>
+    <img class="stars-quote" src="../images/stars-quote.png" alt="stars">
+
+  </section>
+
+  <!--content home-->
+
+  <section class="container-content-home container">
+
+    <div class="row">
+
+      <div class="content-item recommendations col-md-4">
+        <h3 class="recommendations-title">Chef's recommendations</h3>
+        <ul class="recommendations-list">
+          <li class="recommendations-item">
+            <img class="food-image img-thumbnail pull-left" src="../images/food-placeholder-1.jpeg" alt="food"/>
+            <h5>Food Title goes here</h5>
+            <p>Description of the food goes right over here yes it does</p>
+          </li>
+          <li class="recommendations-item">
+            <img class="food-image img-thumbnail pull-left" src="../images/food-placeholder-2.jpeg" alt="food"/>
+            <h5>Food Title goes here</h5>
+            <p>Description of the food goes right over here yes it does</p>
+          </li>
+          <li class="recommendations-item">
+            <img class="food-image img-thumbnail pull-left" src="../images/food-placeholder-3.jpeg" alt="food"/>
+            <h5>Food Title goes here</h5>
+            <p>Description of the food goes right over here yes it does</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-item location-and-hours col-md-4">
+        <h3 class="location-and-hours-title">Location and hours of operation</h3>
+        <img class="location-image img-thumbnail"
+             src="https://maps.googleapis.com/maps/api/staticmap?center=Telerik+Academy&zoom=17&size=248x169&key=AIzaSyAoNUkQubgikLSOlKt5IeOMopLG9MLwJdM"
+             alt="location"/>
+        <p class="address">3214 Sunny st. Petaluma, CA 55439</p>
+        <p class="work-hours"><span class="mon-fri">Mon-Fri</span>8am-6pm<span class="sat-sun">Sat-Sun</span>8am-10pm
+        </p>
+      </div>
+
+      <div class="content-item testimonials col-md-4">
+        <h3 class="testimonials-title">Customer testimonials</h3>
+
+        <div class="testimonial-dialog">
+          <div class="testimonial-author-img pull-left">
+            <img class="img-thumbnail" src="http://i.pravatar.cc/56" alt="author image"/>
+          </div>
+          <h3 class="testimonial-author">Nick Roach</h3>
+          <p class="testimonial-article">"Curabitur magna turpis, convallis sed commodo eget, ornare quis
+            ligula.
+            Nunc congue turpis vel lectus faucibus, eu fermentum diam mollis. Nam nec efficitur neque, sit amet
+            fringilla ante. Praesent molestie ..."
+          </p>
+
+        </div>
+      </div>
+
+    </div> <!--row-->
+
+  </section>
+
+</main>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+          aria-hidden="true">&times;</span></button>
+        <img src="../../images/logo.png" alt="logo">
+        <h4 class="modal-title" id="gridSystemModalLabel">Please, log in</h4>
+      </div>
+
+      <form id="register-user-form" class="form-horizontal">
+
+        <div class="form-group">
+
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12 col-lg-4"><label class="control-label" for="tb-reg-username">Username</label></div>
+              <div class="col-md-12 col-lg-8"><input id="tb-reg-username" type="text" class="form-control"
+                                                     name="username"
+                                                     data-bv-notempty="true"
+                                                     data-bv-notempty-message="The username is required and cannot be empty"
+
+                                                     data-bv-stringlength="true"
+                                                     data-bv-stringlength-min="6"
+                                                     data-bv-stringlength-max="30"
+                                                     data-bv-stringlength-message="The username must be more than 6 and less than 30 characters long"
+
+                                                     data-bv-regexp="true"
+                                                     data-bv-regexp-regexp="^[a-zA-Z0-9]+$"
+                                                     data-bv-regexp-message="The username can only consist of alphabetical and number"
+
+                                                     data-bv-different="true"
+                                                     data-bv-different-field="password"
+                                                     data-bv-different-message="The username and password cannot be the same as each other"/>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12 col-lg-4"><label class="control-label" for="tb-reg-pass">Password</label></div>
+              <div class="col-md-12 col-lg-8"><input id="tb-reg-pass" type="password" class="form-control"
+                                                     name="password"
+                                                     data-bv-notempty="true"
+                                                     data-bv-notempty-message="The password is required and cannot be empty"
+
+                                                     data-bv-stringlength="true"
+                                                     data-bv-stringlength-min="5"
+                                                     data-bv-stringlength-message="The password must have at least 5 characters"
+
+                                                     data-bv-different="true"
+                                                     data-bv-different-field="username"
+                                                     data-bv-different-message="The password cannot be the same as username"/>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button id="btn-register" type="submit" class="btn btn-primary">Register</button>
+          </div>
+
+        </div> <!-- /. form-group -->
+      </form>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

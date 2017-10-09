@@ -1,160 +1,161 @@
 <!doctype html>
 <html class="no-js" lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Slice and Dice Course Project</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slice and Dice Course Project</title>
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css" />
-    <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
-    <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/bootstrapvalidator/dist/css/bootstrapValidator.css" />
+  <link rel="stylesheet" href="/bower_components/toastr/toastr.css" />
+  <link rel="stylesheet" href="/bower_components/components-font-awesome/css/font-awesome.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="./styles/main.css">
-    <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="./styles/main.css">
+  <!-- endbuild -->
 
-    <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <script src="/bower_components/es6-promise/es6-promise.auto.js"></script>
-    <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/es6-promise/es6-promise.auto.js"></script>
+  <!-- endbuild -->
+</head>
+<body>
+  <div id="wrapper">
+
+    <header class="header">
+      <nav class="main-navbar navbar navbar-default">
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#mycuisine-navbar-collapse" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="./images/logo.png" alt="logo"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="mycuisine-navbar-collapse">
+            <ul class="main-nav nav navbar-nav navbar-right">
+              <li>
+                <a href="#">Home</a>
+                <ul>
+                  <li><a href="#">Food</a></li>
+                  <li><a href="#">Recipes</a></li>
+                  <li><a href="#">Lifestyle</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Contact</a></li>
+              <li>
+                <a href="#">Menu</a>
+                <ul>
+                  <li><a href="#">Dinner</a></li>
+                  <li><a href="#">Lunch</a></li>
+                  <li><a href="#">Breakfast</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Location</a></li>
+              <li><a href="#">Awards</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container-fluid -->
+      </nav>
+
+    </header>
 
     <div id="content">
 
     </div>
 
-    <!--<div id="root">-->
-      <!--<header class="container">-->
-        <!--<div class="row">-->
-          <!--<div class="page-header col-md-4">-->
+    <footer class="footer footer-home container-fluid">
 
-            <!--<h1>Test SPA</h1>-->
+      <button>Click Here To Browse The Menu</button>
 
-          <!--</div>-->
+      <img src="./images/ornament-in-footer.png" alt="decoration">
 
-          <!--<div class="col-md-3">-->
+      <nav class="footer-navbar navbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Awards</a></li>
+        </ul>
+      </nav>
 
-          <!--</div>-->
+      <p>Designed by <strong>ElegantThemes</strong> - Powered by <strong>Node.js</strong></p>
 
-          <!--<form class="form-inline col-md-3 hidden" id="container-sign-in">-->
-            <!--&lt;!&ndash;<tengu-sign-in></tengu-sign-in>&ndash;&gt;-->
-            <!--<div class="form-group pull-right">-->
-              <!--<input type="text" class="form-control" id="tb-username" name="username"-->
-                     <!--placeholder="Username"/>-->
-            <!--</div>-->
+    </footer>
 
-            <!--<div class="form-group pull-right">-->
-              <!--<input type="password" class="form-control" id="tb-password" name="password"-->
-                     <!--placeholder="Password"/>-->
-            <!--</div>-->
+  </div> <!-- /.wrapper -->
 
-            <!--<div class="form-subgroup pull-right">-->
-              <!--<div class="checkbox">-->
-                <!--<label>-->
-                  <!--<input type="checkbox"> Remember me-->
-                <!--</label>-->
-              <!--</div>-->
-              <!--<a href="#/users/register" class="text-primary"> or Register</a>-->
-              <!--<button id="btn-sign-in" class="btn-success">Sign in</button>-->
-            <!--</div>-->
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <!--<script>-->
+    <!--(function (b, o, i, l, e, r) {-->
+      <!--b.GoogleAnalyticsObject = l;-->
+      <!--b[l] || (b[l] =-->
+        <!--function () {-->
+          <!--(b[l].q = b[l].q || []).push(arguments)-->
+        <!--});-->
+      <!--b[l].l = +new Date;-->
+      <!--e = o.createElement(i);-->
+      <!--r = o.getElementsByTagName(i)[0];-->
+      <!--e.src = 'https://www.google-analytics.com/analytics.js';-->
+      <!--r.parentNode.insertBefore(e, r)-->
+    <!--}(window, document, 'script', 'ga'));-->
+    <!--ga('create', 'UA-XXXXX-X');-->
+    <!--ga('send', 'pageview');-->
+  <!--</script>-->
 
-          <!--</form>-->
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/handlebars/handlebars.runtime.js"></script>
+  <script src="/bower_components/es6-promise/es6-promise.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="/bower_components/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
+  <script src="/bower_components/toastr/toastr.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
 
-          <!--&lt;!&ndash;Sign out container&ndash;&gt;-->
-          <!--<form class="form-inline col-md-6 hidden" id="container-sign-out">-->
-            <!--&lt;!&ndash;<tengu-sign-out></tengu-sign-out>&ndash;&gt;-->
-            <!--<button id="btn-sign-out" class="suit_and_tie pull-right">Sign out</button>-->
+  <!--bundle Sammy with plugins, cannot use vendor.js for unknown reason-->
+  <!-- build:js scripts/plugins.js -->
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
 
-            <!--<button type="button" class="btn btn-default btn-md pull-right">-->
-              <!--<span class="glyphicon glyphicon-user" aria-hidden="true"></span><span-->
-              <!--id="signed-in-user"></span>-->
-            <!--</button>-->
+  <!--<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>-->
+  <script src="/bower_components/sammy/lib/sammy.js"></script>
+  <!-- endbuild -->
 
-          <!--</form>-->
-        <!--</div>-->
+  <!--cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.4.1/sha1.js"></script>
+  <!--endcdn-->
 
-      <!--</header>-->
-
-      <!--<div class="container">-->
-        <!--<div class="row">-->
-          <!--<div class="col-md-6">-->
-            <!--<div id="content">-->
-
-              <!--&lt;!&ndash;Main content goes here !&ndash;&gt;-->
-
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="col-md-5 aside-container">-->
-            <!--<aside id="right">-->
-              <!--&lt;!&ndash;Comments block replace dummy carousel !&ndash;&gt;-->
-            <!--</aside>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-
-      <!--<footer class="footer">-->
-      <!--</footer>-->
-    <!--</div>-->
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='https://www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
-
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/modernizr/modernizr.js"></script>
-    <script src="/bower_components/handlebars/handlebars.runtime.js"></script>
-    <script src="/bower_components/es6-promise/es6-promise.js"></script>
-    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="/bower_components/bootstrapvalidator/dist/js/bootstrapValidator.js"></script>
-    <script src="/bower_components/toastr/toastr.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
-
-    <!--bundle Sammy with plugins, cannot use vendor.js for unknown reason-->
-    <!-- build:js scripts/plugins.js -->
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-    <script src="/bower_components/sammy/lib/sammy.js"></script>
-    <!-- endbuild -->
-
-    <!--cdn-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha1/0.4.1/sha1.js"></script>
-    <!--endcdn-->
-
-    <!-- build:js scripts/main.js -->
-    <script src="./templates/templates.js"></script>
-    <script src="./scripts/bundle.js"></script>
-    <!--<script src="./scripts/main.js"></script>-->
-    <!-- endbuild -->
-  </body>
+  <!-- build:js scripts/main.js -->
+  <script src="./templates/templates.js"></script>
+  <script src="./scripts/bundle.js"></script>
+  <!-- endbuild -->
+</body>
 </html>

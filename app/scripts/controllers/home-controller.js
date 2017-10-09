@@ -3,7 +3,7 @@ import templateLoader from '../template-loader';
 const homeController = function () {
 
   function all(context) {
-    templateLoader.get('sliced-location')
+    templateLoader.get('home')
       .then(function (template) {
         context.$element().html(template);
       });

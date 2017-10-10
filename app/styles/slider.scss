@@ -44,7 +44,7 @@ input[type="checkbox"] {
   content: url('../images/radio-slider-inactive.png');
 }
 
-.slider-nav input[type="checkbox"]:checked + label::before {
+.slider-nav input[type="checkbox"]:focus + label::before {
   content: url('../images/radio-slider-active.png');
 }
 

@@ -39,6 +39,8 @@ const homeController = function () {
             });
           }
 
+          $('.slider-nav').on()
+
           $('#signed-in-user').html(currentUsername);
           $('#btn-sign-out').on('click', function (e) {
             e.preventDefault();

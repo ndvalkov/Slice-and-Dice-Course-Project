@@ -30,6 +30,7 @@
   <div class="loader"></div>
 
   <div id="wrapper">
+
     <header class="header">
       <nav class="main-navbar navbar navbar-default">
 
@@ -81,8 +82,9 @@
         </div><!-- /.container-fluid -->
       </nav>
 
-    </header>
+    </header><!-- /header -->
 
+    <!--main content goes here-->
     <div id="content">
 
     </div>
@@ -105,9 +107,215 @@
 
       <p>Designed by <strong>ElegantThemes</strong> - Powered by <strong>Node.js</strong></p>
 
-    </footer>
+    </footer><!-- /footer -->
 
   </div> <!-- /.wrapper -->
+
+
+
+  <!--Register/Login Modal-->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            ×</button>
+          <img src="../images/logo-footer.png" alt="logo">
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
+                <li><a href="#Registration" data-toggle="tab">Registration</a></li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="Login">
+                  <form role="form" class="form-horizontal" id="container-sign-in">
+                    <div class="form-group">
+                      <label for="usernameLogin" class="col-sm-2 control-label">
+                        Username</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="usernameLogin" placeholder="Username" />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="passwordLogin" class="col-sm-2 control-label">
+                        Password</label>
+                      <div class="col-sm-10">
+                        <input type="password" class="form-control" id="passwordLogin" placeholder="Password" />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-10">
+                        <button id="btn-sign-in" type="submit" class="btn btn-primary btn-sm">
+                          Login</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane" id="Registration">
+                  <form role="form" class="form-horizontal" id="register-user-form">
+                    <div class="form-group">
+                      <label for="email" class="col-sm-2 control-label">
+                        Email</label>
+                      <div class="col-sm-10">
+                        <input type="email" class="form-control" id="email" placeholder="Email" data-bv-notempty="true"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="usernameRegister" class="col-sm-2 control-label">
+                        Username</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="usernameRegister" placeholder="Username"
+                               data-bv-notempty-message="The username is required and cannot be empty"
+                               data-bv-stringlength="true"
+                               data-bv-stringlength-min="6"
+                               data-bv-stringlength-max="30"
+                               data-bv-stringlength-message="The username must be more than 6 and less than 30 characters long"
+
+                               data-bv-regexp="true"
+                               data-bv-regexp-regexp="^[a-zA-Z0-9]+$"
+                               data-bv-regexp-message="The username can only consist of alphabetical and number"
+
+                               data-bv-different="true"
+                               data-bv-different-field="password"
+                               data-bv-different-message="The username and password cannot be the same as each other"/>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="passwordRegister" class="col-sm-2 control-label">
+                        Password</label>
+                      <div class="col-sm-10">
+                        <input type="password" class="form-control" id="passwordRegister" placeholder="Password" />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-10">
+                        <button id="btn-register" type="submit" class="btn btn-primary btn-sm">
+                          Register</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Admin panel Modal-->
+  <div class="modal fade" id="adminModal" tabindex="-1" role="dialog" aria-labelledby="adminModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            ×</button>
+          <img src="../images/logo-footer.png" alt="logo">
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <!-- Nav tabs -->
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#Dishes" data-toggle="tab">Dishes</a></li>
+                <li><a href="#Menu" data-toggle="tab">Menu</a></li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="Dishes">
+                  <form role="form" class="form-horizontal" id="dishes-form">
+                    <div class="form-group">
+                      <label for="name" class="col-sm-2 control-label">
+                        Name</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" placeholder="Dish name" />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="description" class="col-sm-2 control-label">
+                        Description</label>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" rows="4" id="description" placeholder="Password" ></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="price" class="col-sm-2 control-label">
+                        Description</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="price" placeholder="Price" />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-10">
+                        <button id="btn-save-dish" type="submit" class="btn btn-primary btn-sm">
+                          Save dish</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane" id="Menus">
+                  <form role="form" class="form-horizontal" id="menu-form">
+                    <div class="form-group">
+                      <label for="appetizers" class="col-sm-2 control-label">
+                        Appetizers</label>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" rows="3" id="appetizers" placeholder="Appetizers"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="main-courses" class="col-sm-2 control-label">
+                        Main Courses</label>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" rows="3" id="main-courses" placeholder="Main Courses"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="desserts" class="col-sm-2 control-label">
+                        Desserts</label>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" rows="3" id="desserts" placeholder="Desserts"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="menu-type" class="col-sm-2 control-label">
+                        Menu Type</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="menu-type" placeholder="Menu Type" />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-2">
+                      </div>
+                      <div class="col-sm-10">
+                        <button id="btn-save-menu" type="submit" class="btn btn-primary btn-sm">
+                          Save Menu</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <!--<script>-->

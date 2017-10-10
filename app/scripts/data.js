@@ -56,20 +56,130 @@ const dataService = (function () {
       !!localStorage.getItem(AUTH_KEY);
   }
 
-  function getUsers() {
-    return jsonRequester.get('api/users')
+  /*Dishes*/
+
+  function getDishes() {
+    return jsonRequester.get('api/dishes')
       .then(function (resp) {
         return resp.result;
       });
   }
+
+  function getDishById(id) {
+    const url = 'api/dishes/' + id;
+    return jsonRequester.get(url)
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function createDish(dish) {
+    return jsonRequester.post('api/dishes', {
+      data: dish
+    })
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  /*Menus*/
+  function getMenus() {
+    return jsonRequester.get('api/menus')
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function getMenusByType(type) {
+    const url = 'api/dishes/' + type;
+    return jsonRequester.get(url)
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function createMenu(menu) {
+    return jsonRequester.post('api/menus', {
+      data: menu
+    })
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  /*Recommendations*/
+  function getRecommendations() {
+    return jsonRequester.get('api/recommendations')
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function addRecommendation(rec) {
+    return jsonRequester.post('api/recommendations', {
+      data: rec
+    })
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  /*Reviews*/
+  function getReviews() {
+    return jsonRequester.get('api/reviews')
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function addReview(review) {
+    return jsonRequester.post('api/reviews', {
+      data: review
+    })
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  /*Testiomonials*/
+  function getTestimonials() {
+    return jsonRequester.get('api/testimonials')
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function addTestimonial(test) {
+    return jsonRequester.post('api/testimonials', {
+      data: test
+    })
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+
 
   return {
     users: {
       signIn,
       signOut,
       register,
-      hasUser,
-      get: getUsers
+      hasUser
+    },
+    admin: {
+      getDishes,
+      getDishById,
+      createDish,
+      getMenus,
+      getMenusByType,
+      createMenu,
+      getRecommendations,
+      addRecommendation,
+      getReviews,
+      addReview,
+      getTestimonials,
+      addTestimonial
     }
   };
 }());

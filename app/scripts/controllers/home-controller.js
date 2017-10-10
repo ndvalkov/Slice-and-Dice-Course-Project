@@ -6,7 +6,16 @@ import templateLoader from '../template-loader';
 const homeController = function () {
 
   function all(context) {
-    templateLoader.get('home')
+    const p1 = dataService.cuisine.getRecommendations();
+    const p2 = dataService.cuisine.getTestimonials();
+
+    Promise.all([p1, p2])
+      .then(function (results) {
+        const hbsParams = {};
+        hbsParams.recommendations = results[0].pop();
+        hbsParams.testimonials = results[1].pop();
+        return templateLoader.get('home', hbsParams);
+      })
       .then(function (template) {
         context.$element().html(template);
       })

@@ -64,21 +64,33 @@
       <div class="content-item recommendations col-md-4">
         <h3 class="recommendations-title">Chef's recommendations</h3>
         <ul class="recommendations-list">
-          <li class="recommendations-item">
-            <img class="food-image img-thumbnail pull-left" src="../images/food-placeholder-1.jpeg" alt="food"/>
-            <h5>Food Title goes here</h5>
-            <p>Description of the food goes right over here yes it does</p>
-          </li>
-          <li class="recommendations-item">
-            <img class="food-image img-thumbnail pull-left" src="../images/food-placeholder-2.jpeg" alt="food"/>
-            <h5>Food Title goes here</h5>
-            <p>Description of the food goes right over here yes it does</p>
-          </li>
-          <li class="recommendations-item">
-            <img class="food-image img-thumbnail pull-left" src="../images/food-placeholder-3.jpeg" alt="food"/>
-            <h5>Food Title goes here</h5>
-            <p>Description of the food goes right over here yes it does</p>
-          </li>
+          {{#each recommendations.dishes}}
+            {{#if @first}}
+
+              <li class="recommendations-item">
+                <img class="food-image img-thumbnail pull-left" src="../images/food-placeholder-1.jpeg" alt="food"/>
+                <h5>{{this.name}}</h5>
+                <p>{{this.description}}</p>
+              </li>
+
+            {{else}} {{#if @last}}
+
+              <li class="recommendations-item">
+                <img class="food-image img-thumbnail pull-left" src="../images/food-placeholder-3.jpeg" alt="food"/>
+                <h5>{{this.name}}</h5>
+                <p>{{this.description}}</p>
+              </li>
+
+            {{else}}
+
+              <li class="recommendations-item">
+                <img class="food-image img-thumbnail pull-left" src="../images/food-placeholder-2.jpeg" alt="food"/>
+                <h5>{{this.name}}</h5>
+                <p>{{this.description}}</p>
+              </li>
+
+            {{/if}}{{/if}}
+          {{/each}}
         </ul>
       </div>
 
@@ -97,13 +109,10 @@
 
         <div class="testimonial-dialog">
           <div class="testimonial-author-img pull-left">
-            <img class="img-thumbnail" src="http://i.pravatar.cc/56" alt="author image"/>
+            <img class="img-thumbnail" src="../images/user-avatar.png" alt="author image"/>
           </div>
-          <h3 class="testimonial-author">Nick Roach</h3>
-          <p class="testimonial-article">"Curabitur magna turpis, convallis sed commodo eget, ornare quis
-            ligula.
-            Nunc congue turpis vel lectus faucibus, eu fermentum diam mollis. Nam nec efficitur neque, sit amet
-            fringilla ante. Praesent molestie ..."
+          <h3 class="testimonial-author">{{this.testimonials.author}}</h3>
+          <p class="testimonial-article">{{this.testimonials.content}}
           </p>
 
         </div>

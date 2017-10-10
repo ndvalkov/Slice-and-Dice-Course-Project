@@ -70,7 +70,7 @@ const attachTo = (app, data) => {
             var dish = {
               name: req.body.name,
               description: req.body.description,
-              price: +req.body.price,
+              price: Number.isNaN(+req.body.price) ? 0 : +req.body.price,
               type: req.body.type,
             };
 

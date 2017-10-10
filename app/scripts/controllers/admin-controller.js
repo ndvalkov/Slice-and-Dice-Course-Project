@@ -20,6 +20,7 @@ const adminController = function () {
         toastr.warning('Unable to save menu!');
       });
   }
+
   function saveRecommendation(rec) {
     dataService.admin.addRecommendation(rec)
       .then(function (resp) {
@@ -30,11 +31,32 @@ const adminController = function () {
       });
   }
 
+  function saveReview(review) {
+    dataService.admin.addReview(review)
+      .then(function (resp) {
+        toastr.success('Review saved successfully!');
+      })
+      .catch(function(err) {
+        toastr.warning('Unable to save review!');
+      });
+  }
+
+  function saveTestimonial(test) {
+    dataService.admin.addTestimonial(test)
+      .then(function (resp) {
+        toastr.success('Testimonial saved successfully!');
+      })
+      .catch(function(err) {
+        toastr.warning('Unable to save testimonial!');
+      });
+  }
 
   return {
     saveDish,
     saveMenu,
-    saveRecommendation
+    saveRecommendation,
+    saveReview,
+    saveTestimonial
   };
 }();
 

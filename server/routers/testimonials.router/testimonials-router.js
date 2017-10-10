@@ -31,7 +31,7 @@ const attachTo = (app, data) => {
       // }
 
       req.checkBody('content', 'Content is required').notEmpty();
-      req.sanitizeBody('content').escape();
+      // req.sanitizeBody('content').escape();
       req.sanitizeBody('content').trim();
 
       req.getValidationResult()

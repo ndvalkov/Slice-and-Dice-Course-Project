@@ -34,10 +34,6 @@ const attachTo = (app, data) => {
       req.checkBody('title', 'Dish name is required').notEmpty();
       req.checkBody('content', 'Dish name is required').notEmpty();
 
-      req.sanitizeBody('author').escape();
-      req.sanitizeBody('title').escape();
-      req.sanitizeBody('content').escape();
-
       req.sanitizeBody('author').trim();
       req.sanitizeBody('title').trim();
       req.sanitizeBody('content').trim();

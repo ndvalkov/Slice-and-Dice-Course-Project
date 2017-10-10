@@ -70,7 +70,7 @@ const attachTo = (app, data) => {
       req.checkBody('mainCourses', 'Main course is required').isArray();
       req.checkBody('desserts', 'Dessert is required').isArray();
 
-      req.sanitizeBody('type').escape();
+      // req.sanitizeBody('type').escape();
       req.sanitizeBody('type').trim();
 
       req.getValidationResult()

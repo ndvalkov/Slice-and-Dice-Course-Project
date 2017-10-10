@@ -3,7 +3,6 @@ import usersController from './users-controller';
 import adminController from './admin-controller';
 import templateLoader from '../template-loader';
 
-
 const homeController = function () {
 
   function all(context) {
@@ -26,11 +25,15 @@ const homeController = function () {
                 const $dishForm = $adminModal.find('#dish-form');
                 const $menuForm = $adminModal.find('#menu-form');
                 const $recommendForm = $adminModal.find('#recommend-form');
+                const $reviewForm = $adminModal.find('#review-form');
+                const $testimonialForm = $adminModal.find('#testimonial-form');
 
                 saveDishInit($adminModal, $dishForm);
                 addDishToMenuInit($adminModal, $dishForm);
                 saveMenuInit($adminModal, $menuForm);
                 saveRecommendationInit($adminModal, $recommendForm);
+                saveReviewInit($adminModal, $reviewForm);
+                saveTestimonialInit($adminModal, $testimonialForm);
               })
                 .modal('show');
             });
@@ -160,6 +163,34 @@ const homeController = function () {
         });
 
       adminController.saveRecommendation(recommend);
+    });
+  };
+
+  let saveReviewInit = function ($adminModal, $reviewForm) {
+    $adminModal.on('click', '#btn-save-review', function (e) {
+      e.preventDefault();
+      const review = {};
+      const formValues = $reviewForm
+        .serializeArray()
+        .forEach((x) => {
+          review[x.name] = x.value;
+        });
+
+      adminController.saveReview(review);
+    });
+  };
+
+  let saveTestimonialInit = function ($adminModal, $testimonialForm) {
+    $adminModal.on('click', '#btn-save-testimonial', function (e) {
+      e.preventDefault();
+      const testimonial = {};
+      const formValues = $testimonialForm
+        .serializeArray()
+        .forEach((x) => {
+          testimonial[x.name] = x.value;
+        });
+
+      adminController.saveTestimonial(testimonial);
     });
   };
 

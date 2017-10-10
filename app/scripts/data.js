@@ -158,7 +158,78 @@ const dataService = (function () {
       });
   }
 
+  /*Posts*/
+  function getAllPosts() {
+    return jsonRequester.get('api/posts')
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
 
+  function getAllComments() {
+    return jsonRequester.get('api/posts/comments')
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function getPostById(id) {
+    const url = 'api/posts/' + id;
+    return jsonRequester.get(url)
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function getPostsByCategory(name) {
+    const url = 'api/posts/category/' + name;
+    return jsonRequester.get(url)
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function createPost(post) {
+    return jsonRequester.post('api/posts', {
+      data: post
+    })
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function getCommentsByPost(postId) {
+    const url = 'api/posts/' + postId + '/comments';
+    return jsonRequester.get(url)
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function addCommentToPost(comment, postId) {
+    const url = 'api/posts/' + postId + '/comments';
+    return jsonRequester.post(url, {
+      data: comment
+    })
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  /*Search*/
+  function searchPosts(params) {
+    return jsonRequester.query('api/search/posts', params)
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
+
+  function searchComments(params) {
+    return jsonRequester.query('api/search/comments', params)
+      .then(function (resp) {
+        return resp.result;
+      });
+  }
 
   return {
     users: {
@@ -168,18 +239,33 @@ const dataService = (function () {
       hasUser
     },
     admin: {
+      createDish,
+      createMenu,
+      addRecommendation,
+      addReview,
+      addTestimonial
+    },
+    cuisine: {
       getDishes,
       getDishById,
-      createDish,
       getMenus,
       getMenusByType,
-      createMenu,
       getRecommendations,
-      addRecommendation,
       getReviews,
-      addReview,
-      getTestimonials,
-      addTestimonial
+      getTestimonials
+    },
+    posts: {
+      getAllPosts,
+      getAllComments,
+      getPostById,
+      getPostsByCategory,
+      createPost,
+      getCommentsByPost,
+      addCommentToPost
+    },
+    search: {
+      searchPosts,
+      searchComments
     }
   };
 }());

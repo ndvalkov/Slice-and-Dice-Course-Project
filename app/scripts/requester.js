@@ -40,12 +40,18 @@ const jsonRequester = (function() {
     return send('POST', url, options);
   }
 
+  function getQuery(url, query, options) {
+    const queryUrl = url + '/?' + $.param(query);
+    return send('GET', queryUrl, options);
+  }
+
   return {
     send: send,
     get: get,
     post: post,
     put: put,
-    delete: del
+    delete: del,
+    query: getQuery
   };
 }());
 

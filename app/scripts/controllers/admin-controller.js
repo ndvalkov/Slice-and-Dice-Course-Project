@@ -20,10 +20,21 @@ const adminController = function () {
         toastr.warning('Unable to save menu!');
       });
   }
+  function saveRecommendation(rec) {
+    dataService.admin.addRecommendation(rec)
+      .then(function (resp) {
+        toastr.success('Chef recommendations saved successfully!');
+      })
+      .catch(function(err) {
+        toastr.warning('Unable to save recommended dishes!');
+      });
+  }
+
 
   return {
     saveDish,
-    saveMenu
+    saveMenu,
+    saveRecommendation
   };
 }();
 

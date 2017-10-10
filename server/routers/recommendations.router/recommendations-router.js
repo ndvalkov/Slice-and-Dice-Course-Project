@@ -53,8 +53,10 @@ const attachTo = (app, data) => {
           } else {
             const dishes = req.body.dishes;
             const promises = [];
-            dishes.forEach((d) => {
-              promises.push(data.dishes.filterBy({name: d}));
+            dishes
+              .map(x => JSON.parse(x))
+              .forEach((d) => {
+              promises.push(data.dishes.filterBy({name: d.name}));
             });
 
             return Promise.all(promises);

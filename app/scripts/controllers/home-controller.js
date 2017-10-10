@@ -4,7 +4,6 @@ import adminController from './admin-controller';
 import templateLoader from '../template-loader';
 
 
-
 const homeController = function () {
 
   function all(context) {
@@ -26,10 +25,12 @@ const homeController = function () {
                 const $adminModal = $(this);
                 const $dishForm = $adminModal.find('#dish-form');
                 const $menuForm = $adminModal.find('#menu-form');
+                const $recommendForm = $adminModal.find('#recommend-form');
 
                 saveDishInit($adminModal, $dishForm);
                 addDishToMenuInit($adminModal, $dishForm);
                 saveMenuInit($adminModal, $menuForm);
+                saveRecommendationInit($adminModal, $recommendForm);
               })
                 .modal('show');
             });
@@ -145,6 +146,20 @@ const homeController = function () {
         });
 
       adminController.saveMenu(menu);
+    });
+  };
+
+  let saveRecommendationInit = function ($adminModal, $recommendForm) {
+    $adminModal.on('click', '#btn-save-recommendation', function (e) {
+      e.preventDefault();
+      const recommend = {};
+      const formValues = $recommendForm
+        .serializeArray()
+        .forEach((x) => {
+          recommend[x.name] = x.value.split('dish: ').slice(1).map(x => x.trim());
+        });
+
+      adminController.saveRecommendation(recommend);
     });
   };
 

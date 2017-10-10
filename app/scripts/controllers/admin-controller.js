@@ -11,8 +11,19 @@ const adminController = function () {
       });
   }
 
+  function saveMenu(menu) {
+    dataService.admin.createMenu(menu)
+      .then(function (resp) {
+        toastr.success('Menu saved successfully!');
+      })
+      .catch(function(err) {
+        toastr.warning('Unable to save menu!');
+      });
+  }
+
   return {
-    saveDish
+    saveDish,
+    saveMenu
   };
 }();
 

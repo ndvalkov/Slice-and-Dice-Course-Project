@@ -3,6 +3,8 @@ import usersController from './users-controller';
 import adminController from './admin-controller';
 import templateLoader from '../template-loader';
 
+
+
 const homeController = function () {
 
   function all(context) {
@@ -23,16 +25,11 @@ const homeController = function () {
               $('#adminModal').on('shown.bs.modal', function () {
                 const $adminModal = $(this);
                 const $dishForm = $adminModal.find('#dish-form');
-                $adminModal.on('click', '#btn-save-dish', function(e){
-                  e.preventDefault();
-                  const dish = {};
-                  const formValues = $dishForm
-                    .serializeArray()
-                    .forEach((x) => {
-                      dish[x.name] = x.value;
-                    });
-                  adminController.saveDish(dish);
-                });
+                const $menuForm = $adminModal.find('#menu-form');
+
+                saveDishInit($adminModal, $dishForm);
+                addDishToMenuInit($adminModal, $dishForm);
+                saveMenuInit($adminModal, $menuForm);
               })
                 .modal('show');
             });
@@ -95,6 +92,60 @@ const homeController = function () {
         context.redirect('#/');
         document.location.reload(true);
       });
+  };
+
+  let saveDishInit = function ($adminModal, $dishForm) {
+    $adminModal.on('click', '#btn-save-dish', function (e) {
+      e.preventDefault();
+      const dish = {};
+      const formValues = $dishForm
+        .serializeArray()
+        .forEach((x) => {
+          if (x.name === 'menu-item') {
+            return;
+          }
+          dish[x.name] = x.value;
+        });
+      adminController.saveDish(dish);
+    });
+  };
+
+  let addDishToMenuInit =  function ($adminModal, $dishForm) {
+    $adminModal.on('click', '#btn-add-to-menu', function (e) {
+      e.preventDefault();
+      const dish = {};
+      let menuItem = '#';
+      const formValues = $dishForm
+        .serializeArray()
+        .forEach((x) => {
+          if (x.name === 'menu-item') {
+            menuItem += x.value;
+            return;
+          }
+          dish[x.name] = x.value;
+        });
+
+      $adminModal.find(menuItem).append('dish: ' + JSON.stringify(dish));
+    });
+  };
+
+  let saveMenuInit = function ($adminModal, $menuForm) {
+    $adminModal.on('click', '#btn-save-menu', function (e) {
+      e.preventDefault();
+      const menu = {};
+      const formValues = $menuForm
+        .serializeArray()
+        .forEach((x) => {
+          if (x.name === 'type') {
+            menu[x.name] = x.value;
+          }
+          else {
+            menu[x.name] = x.value.split('dish: ').slice(1);
+          }
+        });
+
+      adminController.saveMenu(menu);
+    });
   };
 
   return {

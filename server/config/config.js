@@ -2,10 +2,12 @@
 
 const bodyParser = require('body-parser');
 const express = require('express');
+const compression = require('compression');
 
 const applyTo = (app, dev) => {
 
   app.use(bodyParser.json());
+  app.use(compression());
 
   if (dev) {
     app.use(express.static('app'));

@@ -1,6 +1,7 @@
 import homeController from './controllers/home-controller';
 import menuController from './controllers/menu-controller';
 import postsController from './controllers/posts-controller';
+import locationController from './controllers/location-controller';
 
 (function () {
 
@@ -11,6 +12,7 @@ import postsController from './controllers/posts-controller';
     this.get('#/posts/food', postsController.food);
     this.get('#/posts/recipes', postsController.recipes);
     this.get('#/posts/lifestyle', postsController.lifestyle);
+    this.get('#/location', locationController.all);
   });
 
   $(function () {

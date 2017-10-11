@@ -63,9 +63,9 @@ const attachTo = (app, data) => {
           }
         })
         .then((results) => {
-          if (!results) {
+          if (results.any(x => x.length === 0)) {
             res.status(400)
-              .json('Unable to add recommendations');
+              .json('Unable to add recommendations, dish doesn\'t exist');
           } else {
             const recommendations = [];
             // remove duplicates

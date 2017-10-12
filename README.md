@@ -5,7 +5,11 @@ Telerik Academy | Slice-and-Dice Course
   
  #### Description
   SPA application built with Node.js, Mongodb, Browserify, Handlebars, Sammyjs, Bootstrap
-
+  
+  Scaffold with [Yeoman web app](https://github.com/yeoman/generator-webapp)
+  
+  Tested on Chrome, Firefox, Opera, IE 11
+  
  #### Install
  
  - yarn
